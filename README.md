@@ -17,3 +17,21 @@ Renette Ros - 13007557
 Michelle Swanepoel - 13066294
 
 Frikkie Snyman - 13028741
+
+##Task Allocation
+=====================
+Andreas du Preez -
+
+Jason Evans - 
+
+Sebastian Gerber - 
+
+Baruch Molefe - 
+
+Kyhle Ohlinger -
+
+Renette Ros - 
+
+Michelle Swanepoel - 
+
+Frikkie Snyman - 
