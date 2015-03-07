@@ -3,14 +3,53 @@
 
 \begin{flushleft}
 	\begin{itemize}
+	%sebastian's Section 
 		\item \textbf{Scalability:} 
 		\item \textbf{Performance Requirements:} 
 		\item \textbf{Maintainability:} 
 	
+	%Kyhle's Section 
+	%Started my points.
+	%Still need to edit my points at a later stage.
 		\item \textbf{Reliability and Availability:} 
-		\item \textbf{Security:} 
-		\item \textbf{Monitorability and Auditability:} 
+The reliability and availability of the system is important for all users, i.e. The students, tutor, lecturers, and administrative staff.
+\newline
+
+If the system is unavailable, then users would not be able to access the required information on the system. This could have serious implications on all users.	\newline
+
+Reliability and Availability of a system is essential, this could be achieved by:
+\begin{itemize}
+\item Identifying ways to prevent system failure, and if the system does fail, have measures in place to start a failover, so that the system is still accessible.
+\item Identifying ways to handle the system when external systems, to which the system is connected, i.e communication networks, external databases, are unavailable. This could be done by having some sort of offline system functionality.
+\end{itemize}
+
 	
+		
+		\item \textbf{Security:} 
+The security of the system is important for all users, i.e. The students, tutor, lecturers, and administrative staff.
+\newline
+
+The purpose of security is to protect the information stored in the system, whether it be the systems information or user data, and prevent unauthorised access to and/or modification of the information.
+\newline
+
+In order to enforce security:
+\begin{itemize}
+ \item The system should authentication and authorization to prevent spoofing of users identities.
+ \item Input validation is important in preventing damage caused by malicious input.
+ \item Sensitive data should be encrypted and user activity, i.e. Guest and Authorised users, should be monitored to prevent loss or damage of data.
+ \item The system should log all user interaction with the system, this would be beneficial when auditing the system.
+ \item The system should have multiple safe guards in order to protect access to data.
+ \item System timeouts could be considered, in the unlikely event of DOS or DDOS attacks.
+\end{itemize}
+ 
+		\item \textbf{Monitorability and Auditability:} 
+The system will be monitored by the administrative staff and users that are specifically assigned the role of maintaining the system. \newline
+
+This will help ensure that users abide by the netiquette and plagiarism policies. Any infringement of these policies should be captured/logged for later use by the administrative staff. \newline
+
+The audit logs would be made accessible to the administrative staff through specific requests to the system. 
+			
+	%Andreas' Section
 		\item \textbf{Testability:} 
 		\item \textbf{Usability:} 
 		\item \textbf{Integrability:} 
