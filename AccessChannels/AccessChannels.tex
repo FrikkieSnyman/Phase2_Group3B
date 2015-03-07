@@ -1,23 +1,8 @@
-\section{Access Channels}
+\section{Access and Integration  Channels}
 To facilitate and simplify the communication between the BuzzSystem and various access channels all of these access channels should send requests using the http protocol. A specific module in the Buzz System should handle all http requests and return JSON objects containing the needed data from other modules. The structuring and responses of these http requests should be clearly documented enabling the easy addition of more access channels.
 
 \subsection{Human Access Channel - Website}
 The main human access channel for the Buzz System will be an web-based front end. It will be referred to as BuzzWeb in the rest of this document for easy distinction between it and the BuzzSystem.
-	\subsubsection{Technologies}
-	BuzzWeb will use several popular web technologies:
-	\begin{itemize}
-		\item HTML5
-		\item CSS3
-		\item JSON
-		\item JavaScript for interactivity and Ajax
-			\begin{itemize}
-				\item Jquery
-				\item JqueryUI
-				\item Google Code Prettify
-			\end{itemize}
-		\item Bootstrap for responsive design					
-	\end{itemize}
-	
 	\subsubsection{Requirements}
 	\begin{itemize}
 		\item BuzzWeb should be cross-browser compatible.
@@ -25,18 +10,48 @@ The main human access channel for the Buzz System will be an web-based front end
 		\item It should conform to the newest HTML5 and CSS3 standards.
 		\item Techniques like Ajax should be used to submit content and periodically fetch new content from the server without refreshing the whole page. 
 	\end{itemize}
+
+	\subsubsection{Technologies}
+	BuzzWeb will use several popular web technologies:
+	\begin{itemize}
+		\item HTML5
+		\item CSS3
+		\item JSON
+		\item JavaScript:
+			\begin{itemize}
+				\item Jquery
+				\item JqueryUI
+				\item Google Code Prettify
+				\item Ajax
+			\end{itemize}
+		\item Bootstrap for responsive design					
+	\end{itemize}
+	
+		
 	\subsubsection{Protocols}
-	The main protocol used to communicate with the Buzz-Server will be https. 
+	The main protocol used to communicate with the BuzzSystem will be http, preferably over an encrypted connection (so https). 
 	
-	The website will send http requests to the server which will respond with JSON objects. The client-side JavaScript will parse these JSON objects and return applicable html where necessary. 
-	
+	This will happen in two ways: 
+	\begin{itemize}
+	\item The user's browser will send and http GET request to a specific page. The BuzzSystem will respond with static html content.
+	\item BuzzWeb will send an asynchronous http POST request to the server which will respond with an JSON object. The client-side JavaScript will parse these JSON objects and create and return applicable html where necessary.
+	\end{itemize}
 
 \subsection{Human Access Channel - Smartphone Apps}
-Creating an Smartphone Apps for the Buzz System is not part of this project's scope, but these apps will also be able to communicate with the BuzzSystem using http requests with the same structure as thiose BuzzWeb uses.
+Creating an Smartphone Apps for the Buzz System is not part of this project's scope, but these apps will also be able to communicate with the BuzzSystem using http requests with the same structure as those BuzzWeb uses.
 
-\subsection{System Access Channel}
-There are no system access channels that from part of the scope of this project, but any system access channels should also use the http protocol to communicate with the BuzzSystem. An example might be a later integration of the BuzzSystem with Department of Computer Scienc'se marking system.
+\subsection{System Access Channels}
+There are no system access channels that form part of the scope of this project at the moment, but any system access channels should also use the http protocol to communicate with the BuzzSystem. An example might be a later integration of the BuzzSystem with the Department of Computer Science's marking system.
 
-\section{Integration Channels}
-\subsection{CS Eldap}
-The BuzzSystem will integrate with the CS Eldap server to check user login credentials and obtain user roles and information. 
+\subsection{Integration Channel - Authentication}
+The BuzzSystem will integrate with the Computer Science ldap repository to authenticate users and obtain user roles and module information. 
+
+\subsubsection{Technologies and Protocols}
+The LDAP (Lightweight Directory Access Protocol) Protocol will be used to obtain user and module information from the Computer Science Department's ldap repository. 
+
+\subsection{Integration Channel - Database}
+The Buzz System will integrate with an object-relational database to store its content. 
+
+\subsubsection{Technologies and protocols}
+The system will use PostgreSQL and the PostgreSQL JDBC Driver for the databse.
+
