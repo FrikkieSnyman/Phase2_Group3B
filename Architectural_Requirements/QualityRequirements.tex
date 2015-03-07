@@ -12,21 +12,23 @@
 	%Started my points.
 	%Still need to edit my points at a later stage.
 		\item \textbf{Reliability and Availability:} 
-The reliability and availability of the system is important for all users, i.e. The students, tutor, lecturers, and administrative staff.
+The reliability and availability of the system is important for all users, i.e. The students, tutors, lecturers, and administrative staff.
 \newline
 
-If the system is unavailable, then users would not be able to access the required information on the system. This could have serious implications on all users.	\newline
+If the system is unavailable, then users would not be able to access the required information on the system. This could have serious implications on all users. It is thus imperative to minimise system downtime, thus maximising system availability.\newline
 
 Reliability and Availability of a system is essential, this could be achieved by:
 \begin{itemize}
 \item Identifying ways to prevent system failure, and if the system does fail, have measures in place to start a failover, so that the system is still accessible.
-\item Identifying ways to handle the system when external systems, to which the system is connected, i.e communication networks, external databases, are unavailable. This could be done by having some sort of offline system functionality.
+\item Detecting if there are problems with the system, in order to do maintenance on the system before the system fails.
+\item Identifying ways to recover from system failures, e.g. have backups and rollback functionality so that no data is lost.
+\item Identifying ways to handle the system when external systems, to which the system is connected, i.e communication networks, external databases,etc. are unavailable. This could be done by having some sort of offline system functionality, or having ways to switch between various external systems.
 \end{itemize}
 
 	
 		
 		\item \textbf{Security:} 
-The security of the system is important for all users, i.e. The students, tutor, lecturers, and administrative staff.
+The security of the system is important for all users, i.e. The students, tutors, lecturers, and administrative staff.
 \newline
 
 The purpose of security is to protect the information stored in the system, whether it be the systems information or user data, and prevent unauthorised access to and/or modification of the information.
@@ -34,7 +36,7 @@ The purpose of security is to protect the information stored in the system, whet
 
 In order to enforce security:
 \begin{itemize}
- \item The system should authentication and authorization to prevent spoofing of users identities.
+ \item The system should enforce authentication and authorization or users to prevent spoofing of users identities.
  \item Input validation is important in preventing damage caused by malicious input.
  \item Sensitive data should be encrypted and user activity, i.e. Guest and Authorised users, should be monitored to prevent loss or damage of data.
  \item The system should log all user interaction with the system, this would be beneficial when auditing the system.
@@ -43,11 +45,18 @@ In order to enforce security:
 \end{itemize}
  
 		\item \textbf{Monitorability and Auditability:} 
-The system will be monitored by the administrative staff and users that are specifically assigned the role of maintaining the system. \newline
+The system will be monitored by the administrative staff and users that are specifically assigned the role of maintenance. \newline
 
-This will help ensure that users abide by the netiquette and plagiarism policies. Any infringement of these policies should be captured/logged for later use by the administrative staff. \newline
+This will help ensure that users abide by the netiquette and plagiarism policies.  \newline
 
-The audit logs would be made accessible to the administrative staff through specific requests to the system. 
+To help with the Monitorability and Auditability of the system:
+\begin{itemize}
+\item Track all changes made by all users. 
+\item Any infringement of these policies should be captured/logged for later use by the administrative staff.
+\item The audit logs would be made accessible to the administrative staff through specific requests to the system. 
+\end{itemize}
+
+
 			
 	%Andreas' Section
 		\item \textbf{Testability:} 
