@@ -3,11 +3,48 @@
 
 \begin{flushleft}
 	\begin{itemize}
-	%sebastian's Section 
+	%Sebastian's Section 
+	%Started my points.
+	%Still need to add some points when I think of them.
 		\item \textbf{Scalability:} 
+The scalability of the system is not such an important requirement.
+\newline
+
+The system will mostly be run on large servers capable of servicing an entire university and as such will not need to be extremely scalable.
+\newline
+
+However if scalability is desired at some point it could be achieved by producing a light version of the system, which could be used on smaller systems which could be achieved by:
+\begin{itemize}
+\item Removing features not required by private users such as simplifying administration of users.
+\item Limiting the number of users of threads created to reduce overhead on the system.
+\item Remove some security or authentication features which would likely not be need on small, private servers.
+
+\end{itemize}
 		\item \textbf{Performance Requirements:} 
+Performance is a very important requirement as the system must be able to accomodate thousands of users and threads.
+\newline
+
+The system will mostly be run on large servers capable of servicing an entire university, however performance must still be considered.
+\newline
+
+Perfromance can be enhanced in the following ways:
+\begin{itemize}
+\item Reducing overhead by having unimportant processes such as profile editing suspended in times of high usage.
+\item Archiving old posts while using faster access storage for newer or more active threads.
+\item Removing very old posts to reduce the storage requirements of the system.
+\item Prioritize the requests of users with higher priveleges such as lecturers and administrators.
+
+\end{itemize}
 		\item \textbf{Maintainability:} 
-	
+Maintainability is very important to the system as any failure of a key component could result in loss of data or the inability to use the system.
+\newline
+
+Maintainability can be achieved by:
+\begin{itemize}
+\item Having up to date backups of the data in the system to be used in the event of data loss due to hardware failure.
+\item Having the system modularised in such a way that one component failing will not affect other components.
+
+\end{itemize}
 	%Kyhle's Section 
 	%Started my points.
 	%Still need to edit my points at a later stage.
