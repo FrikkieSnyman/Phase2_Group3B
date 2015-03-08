@@ -13,13 +13,6 @@ The scalability of the system is not such an important requirement.
 The system will mostly be run on large servers capable of servicing an entire university and as such will not need to be extremely scalable.
 \newline
 
-However if scalability is desired at some point it could be achieved by producing a light version of the system, which could be used on smaller systems which could be achieved by:
-\begin{itemize}
-\item Removing features not required by private users such as simplifying administration of users.
-\item Limiting the number of users of threads created to reduce overhead on the system.
-\item Remove some security or authentication features which would likely not be need on small, private servers.
-
-\end{itemize}
 		\item \textbf{Performance Requirements:} 
 Performance is a very important requirement as the system must be able to accomodate thousands of users and threads.
 \newline
@@ -27,24 +20,10 @@ Performance is a very important requirement as the system must be able to accomo
 The system will mostly be run on large servers capable of servicing an entire university, however performance must still be considered.
 \newline
 
-Perfromance can be enhanced in the following ways:
-\begin{itemize}
-\item Reducing overhead by having unimportant processes such as profile editing suspended in times of high usage.
-\item Archiving old posts while using faster access storage for newer or more active threads.
-\item Removing very old posts to reduce the storage requirements of the system.
-\item Prioritize the requests of users with higher priveleges such as lecturers and administrators.
-
-\end{itemize}
 		\item \textbf{Maintainability:} 
 Maintainability is very important to the system as any failure of a key component could result in loss of data or the inability to use the system.
 \newline
 
-Maintainability can be achieved by:
-\begin{itemize}
-\item Having up to date backups of the data in the system to be used in the event of data loss due to hardware failure.
-\item Having the system modularised in such a way that one component failing will not affect other components.
-
-\end{itemize}
 	%Kyhle's Section 
 	%Started my points.
 	%Still need to edit my points at a later stage.
@@ -52,17 +31,7 @@ Maintainability can be achieved by:
 The reliability and availability of the system is important for all users, i.e. The students, tutors, lecturers, and administrative staff.
 \newline
 
-If the system is unavailable, then users would not be able to access the required information on the system. This could have serious implications on all users. It is thus imperative to minimise system downtime, thus maximising system availability.\newline
-
-Reliability and Availability of a system is essential, this could be achieved by:
-\begin{itemize}
-\item Identifying ways to prevent system failure, and if the system does fail, have measures in place to start a failover, so that the system is still accessible.
-\item Detecting if there are problems with the system, in order to do maintenance on the system before the system fails.
-\item Identifying ways to recover from system failures, e.g. have backups and rollback functionality so that no data is lost.
-\item Identifying ways to handle the system when external systems, to which the system is connected, i.e communication networks, external databases,etc. are unavailable. This could be done by having some sort of offline system functionality, or having ways to switch between various external systems.
-\end{itemize}
-
-	
+If the system is unavailable, then users would not be able to access the required information on the system. This could have serious implications on all users. It is thus imperative to minimise system downtime, thus maximising system availability.\newline	
 		
 		\item \textbf{Security:} 
 The security of the system is important for all users, i.e. The students, tutors, lecturers, and administrative staff.
@@ -70,30 +39,11 @@ The security of the system is important for all users, i.e. The students, tutors
 
 The purpose of security is to protect the information stored in the system, whether it be the systems information or user data, and prevent unauthorised access to and/or modification of the information.
 \newline
-
-In order to enforce security:
-\begin{itemize}
- \item The system should enforce authentication and authorization or users to prevent spoofing of users identities.
- \item Input validation is important in preventing damage caused by malicious input.
- \item Sensitive data should be encrypted and user activity, i.e. Guest and Authorised users, should be monitored to prevent loss or damage of data.
- \item The system should log all user interaction with the system, this would be beneficial when auditing the system.
- \item The system should have multiple safe guards in order to protect access to data.
- \item System timeouts could be considered, in the unlikely event of DOS or DDOS attacks.
-\end{itemize}
  
 		\item \textbf{Monitorability and Auditability:} 
 The system will be monitored by the administrative staff and users that are specifically assigned the role of maintenance. \newline
 
 This will help ensure that users abide by the netiquette and plagiarism policies.  \newline
-
-To help with the Monitorability and Auditability of the system:
-\begin{itemize}
-\item Track all changes made by all users. 
-\item Any infringement of these policies should be captured/logged for later use by the administrative staff.
-\item The audit logs would be made accessible to the administrative staff through specific requests to the system. 
-\end{itemize}
-
-
 			
 	%Andreas' Section
 		\item \textbf{Testability:} 

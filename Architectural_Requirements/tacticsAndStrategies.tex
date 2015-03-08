@@ -1,5 +1,88 @@
 % COS 301 - Mini Project
 % Phase 2 - Group 3-B
+
+\subsection{Scalability}
+	\begin{flushleft}
+if scalability is desired at some point it could be achieved by producing a light version of the system, which could be used on smaller systems which could be achieved by:
+\begin{itemize}
+\item Removing features not required by private users such as simplifying administration of users.
+\item Limiting the number of users of threads created to reduce overhead on the system.
+\item Remove some security or authentication features which would likely not be need on small, private servers.
+
+\end{itemize}
+	\end{flushleft}
+	
+\subsection{Performance Requirements}
 \begin{flushleft}
- Hello world
+Performance can be enhanced in the following ways:
+\begin{itemize}
+\item Reducing overhead by having unimportant processes such as profile editing suspended in times of high usage.
+\item Archiving old posts while using faster access storage for newer or more active threads.
+\item Removing very old posts to reduce the storage requirements of the system.
+\item Prioritize the requests of users with higher priveleges such as lecturers and administrators.
+
+\end{itemize}
+
+\end{flushleft}
+
+\subsection{Maintainability}
+\begin{flushright}
+Maintainability can be achieved by:
+\begin{itemize}
+\item Having up to date backups of the data in the system to be used in the event of data loss due to hardware failure.
+\item Having the system modularised in such a way that one component failing will not affect other components.
+
+\end{itemize}
+
+\end{flushright}
+
+\subsection{Reliability and Availability}
+\begin{flushleft}
+Reliability and Availability of a system is essential, this could be achieved by:
+\begin{itemize}
+\item Identifying ways to prevent system failure, and if the system does fail, have measures in place to start a failover, so that the system is still accessible.
+\item Detecting if there are problems with the system, in order to do maintenance on the system before the system fails.
+\item Identifying ways to recover from system failures, e.g. have backups and rollback functionality so that no data is lost.
+\item Identifying ways to handle the system when external systems, to which the system is connected, i.e communication networks, external databases,etc. are unavailable. This could be done by having some sort of offline system functionality, or having ways to switch between various external systems.
+\end{itemize}
+
+\end{flushleft}
+
+\subsection{Security}
+\begin{flushleft}
+In order to enforce security:
+\begin{itemize}
+ \item The system should enforce authentication and authorization or users to prevent spoofing of users identities.
+ \item Input validation is important in preventing damage caused by malicious input.
+ \item Sensitive data should be encrypted and user activity, i.e. Guest and Authorised users, should be monitored to prevent loss or damage of data.
+ \item The system should log all user interaction with the system, this would be beneficial when auditing the system.
+ \item The system should have multiple safe guards in order to protect access to data.
+ \item System timeouts could be considered, in the unlikely event of DOS or DDOS attacks.
+\end{itemize}
+
+\end{flushleft}
+
+\subsection{Monitorability and Auditability}
+\begin{flushleft}
+To help with the Monitorability and Auditability of the system:
+\begin{itemize}
+\item Track all changes made by all users. 
+\item Any infringement of these policies should be captured/logged for later use by the administrative staff.
+\item The audit logs would be made accessible to the administrative staff through specific requests to the system. 
+\end{itemize}
+\end{flushleft}
+
+\subsection{Testability}
+\begin{flushleft}
+
+\end{flushleft}
+
+\subsection{Usability}
+\begin{flushleft}
+
+\end{flushleft}
+
+\subsection{Integrability}
+\begin{flushleft}
+
 \end{flushleft}
