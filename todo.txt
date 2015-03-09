@@ -1,0 +1,13 @@
+*Scope of architectural..
+	- Presentation layer (Renette se ons moet dit los)
+
+*Architecture constraints
+	- technology constraints are discussed @ techonologies sections
+
+*Integrate Patterns and Styles
+
+*Use of Reference Architectures and frameworks
+	- Get a list of APIs to include in the project
+
+*techonologies// michelle
+ - Architecture constraints here
