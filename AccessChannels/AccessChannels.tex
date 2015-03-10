@@ -1,8 +1,8 @@
-\section{Access and Integration  Channels}
+\section{Access Channels} \label{AccessChannels}
 To facilitate and simplify the communication between the BuzzSystem and various access channels all of these access channels should send requests using the http protocol. A specific module in the Buzz System should handle all http requests and return JSON objects containing the needed data from other modules. The structuring and responses of these http requests should be clearly documented enabling the easy addition of more access channels.
 
-\subsection{Human Access Channel - Website}
-The main human access channel for the Buzz System will be an web-based front end. It will be referred to as BuzzWeb in the rest of this document for easy distinction between it and the BuzzSystem.
+\subsection{BuzzWeb} \label{BuzzWeb}
+The main human access channel for the Buzz System will be an web-based front end. This website will be referred to as BuzzWeb in the rest of this document for easy distinction between it and the rest of the Buzz System.
 	\subsubsection{Requirements}
 	\begin{itemize}
 		\item BuzzWeb should be cross-browser compatible.
@@ -10,9 +10,6 @@ The main human access channel for the Buzz System will be an web-based front end
 		\item It should conform to the newest HTML5 and CSS3 standards.
 		\item Techniques like Ajax should be used to submit content and periodically fetch new content from the server without refreshing the whole page. 
 	\end{itemize}
-
-	\subsubsection{Technologies}
-	
 		
 	\subsubsection{Protocols}
 	The main protocol used to communicate with the BuzzSystem will be http, preferably over an encrypted connection (so https). 
@@ -21,22 +18,31 @@ The main human access channel for the Buzz System will be an web-based front end
 	\begin{itemize}
 	\item The user's browser will send and http GET request to a specific page. The BuzzSystem will respond with static html content.
 	\item BuzzWeb will send an asynchronous http POST request to the server which will respond with an JSON object. The client-side JavaScript will parse these JSON objects and create and return applicable html where necessary.
-	\end{itemize}
+	\end{itemize}	
+		
+	\subsubsection{Technologies}
+	The technologies that will be used for BuzzWeb is discussed in Section \ref{technologies}
 
-\subsection{Human Access Channel - Smartphone Apps}
+\subsection{Smartphone Apps}
 Creating an Smartphone Apps for the Buzz System is not part of this project's scope, but these apps will also be able to communicate with the BuzzSystem using http requests with the same structure as those BuzzWeb uses.
 
 \subsection{System Access Channels}
 There are no system access channels that form part of the scope of this project at the moment, but any system access channels should also use the http protocol to communicate with the BuzzSystem. An example might be a later integration of the BuzzSystem with the Department of Computer Science's marking system.
 
-\subsection{Integration Channel - Authentication}
-The BuzzSystem will integrate with the Computer Science ldap repository to authenticate users and obtain user roles and module information. 
+
+\section{Integration Channels}
+\subsection{Computer Science Website}
+The BuzzSystem will integrate with the Computer Science website to authenticate users and obtain user roles and module information. 
 
 \subsubsection{Technologies and Protocols}
-The LDAP (Lightweight Directory Access Protocol) Protocol will be used to obtain user and module information from the Computer Science Department's ldap repository. 
+The LDAP (Lightweight Directory Access Protocol) Protocol will be used to obtain user and module information from the Computer Science Department's ldap repository. The system will also connect to the CS-websites MySQL database.
 
-\subsection{Integration Channel - Database}
+\subsection{Database}
 The Buzz System will integrate with an Relational database to store its content. 
 
 \subsubsection{Technologies and protocols}
-The system will use MySQL and  the MySQL JDBC driver or a siliar databse system.
+The system will use MySQL and  the MySQL JDBC driver or a similar database system.
+
+\subsection{Buzz System Front End}
+The Buzz System needs to integrate seamlessly with BuzzWeb as this will initially be the only human access channel to the system. It is discussed in more details in subsection \ref{BuzzWeb}.
+

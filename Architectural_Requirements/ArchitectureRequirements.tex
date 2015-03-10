@@ -2,18 +2,19 @@
 % Phase 2 - Group 3-B
 
 \subsection{Scope of Architectural Responsibilities}
-\begin{flushleft}
-	\begin{flushleft}
-	\textbf{Database as mode of persistence: } \\
+%\begin{flushleft}
+	%\begin{flushleft}
+	\subsubsection{Database as mode of persistence: }
 	In the scope of the BUZZ system and taking into consideration the type of data the system should store, we have concluded to make use of a Relational Database Management System (RDBMS). The BUZZ system will store only structured data with strong relations between content (e.g. Threads and Social Tags). Persistence of data is also closely related to the auditibility of the BUZZ system, hence deleted threads will not be removed completely from the database, but instead be archived (marked as hidden) for possible later retrieval.
-	\end{flushleft}
+	%\end{flushleft}
 	
-	\begin{flushleft}
-	\textbf{Communication:}\\
+	%\begin{flushleft}
+	\subsubsection{Communication:}
 	The BUZZ sytem will primarily be a web-based application accessable through any web browser, hence our focus on communication between the servers and the application should take place over \textbf{HTTP}(Hyper Text Transfer Protocol) requests and responses. This will also ensure that our system is more adaptable when there is a possibility of expanding the application system to support an Android based mobile application. \\
 	Any request that the server receives and processes should then be replied to the application (processed information should be reported back) using \textbf{JSON}(Javascript Object Notation). Our team has chosen this technology as our response communication based of the possibility of expanding the system to support other technologies such as mobile applications. When the response is sent as JSON, there is more effective \textbf{SoC} (Seperation of Concern) and all access channels that requires access to the server will effectively have the same information passed back to them.
-	\end{flushleft}
-\end{flushleft}
+	%\end{flushleft}
+
+%\end{flushleft}
 
 %\subsection{Access and Integration Requirements} THis is the same as the main heading, So I'm removing it here.
 %\subsection{Architectural Responsibilities}
@@ -21,3 +22,7 @@
 	\input{Architectural_Requirements/QualityRequirements.tex}
 	
 \subsection{Architecture Constraints}
+\begin{itemize}
+\item Constraints regarding technologies are discussed in section \ref{technologies}
+\item Constraints regarding access channels (e. Web front-end, Android App) is discussed in section \ref{AccessChannels}
+\end{itemize}
