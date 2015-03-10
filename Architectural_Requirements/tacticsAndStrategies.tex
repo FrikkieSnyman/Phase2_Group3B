@@ -75,15 +75,41 @@ To help with the Monitorability and Auditability of the system:
 
 \subsection{Testability}
 \begin{flushleft}
+What could be tested for:
+		\begin{itemize}
+		\item User profiles should be successfully created and have the correct information in them.
+		\item Users’ privileges correspond to their user rank.
+		\item Security breaches.
+		\item All services provide the correct output if given certain input.
+		\end{itemize}
 
 \end{flushleft}
 
 \subsection{Usability}
 \begin{flushleft}
+		Participation will increase if the interface is easy to understand and easy to use. \newline
+		
+		A navigation bar needs to be implemented so that the users can easily navigate to where they want to be. \newline
+		
+		Readability is also a very important aspect in the system. Using a font that is easily readable can greatly increase users’ experience. Choosing the correct colour scheme is also important. \newline
+		
+		Users should be able to:
+		\begin{itemize}
+		\item Know how to use the system without any serious assistance.
+		\item Learn how to use new concepts if the system was to be upgraded.
+		\item Remember how to use the system after the first use.
+		\item Like the system.
+		\item Give feedback. 
+		\end{itemize}
+		
 
 \end{flushleft}
 
 \subsection{Integrability}
 \begin{flushleft}
-
+The system will need to be easily integrable with other database software. If the current database software fails then the system will need to be able to switch database software in order to continue logging all incoming and outgoing data. \newline
+		
+		If the web service fails, then the system must be easily portable to another web service (different versions of software). \newline
+		
+		The abstract factory pattern can be used to easily port the system to another environment. \newline
 \end{flushleft}
