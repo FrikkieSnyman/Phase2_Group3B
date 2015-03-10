@@ -12,6 +12,9 @@
 	automatically translates the content that is found on the application. This means that the application is not restricted to certain language speakers, and enhances its pluggability.
 	\subsection{Plagiarism check}
 	PlagScan API (\url{https://api.plagscan.com/guide}) is an open-source API that handles plagiarism checks by sending the data to be checked as a POST request. The response sent is dependant on the configuration, and can be set to be received as XML data, and some methods can be received as either plain binary data or HTML. In order to use this API, one must first register for a PlagScan Pro organization account, after which an API key must be generated. The API can also be set up to define from which IP ranges requests can be sent using the generated API key.
-
+	\subsection{Fonts}
+	The front end of the application must be user friendly. This can be achieved by using the Google Fonts API (\url{https://developers.google.com/fonts/})
+	\subsection{Netiquette}
+	An auto-moderator bot can be implemented using already existing open-source API's. Specifically the AutoModerator programmed for Reddit (\url{https://github.com/Deimos/AutoModerator}). This implementation is needed to be able to identify whether or not users have violated any netiquette rules in their posts. Note, that it would not be sensible to fork from the Reddit AutoModerator but to use it as a reference framework to determine what the appropriately implemented auto-moderator's functionality should stretch to.
 
 \end{flushleft}
